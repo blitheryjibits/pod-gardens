@@ -3,16 +3,16 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative px-8 py-20 lg:py-32 max-w-8xl mx-auto overflow-hidden">
+    <section className="relative px-8 py-20 lg:py-24 max-w-8xl mx-auto overflow-hidden">
       <div className="grid lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7 z-10 ml-8">
-          <h1 className="font-headline text-6xl lg:text-9xl text-primary leading-tight font-bold mb-8">
+        <div className="lg:col-span-7 ml-8">
+          <h1 className="font-headline text-6xl lg:text-8xl text-primary leading-none font-bold mb-8">
             Built for the <br />
             <span className="italic font-normal md:ml-24">Australian</span>{" "}
             Terrain
           </h1>
 
-          <p className="font-body text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+          <p className="font-body text-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
             We don&apos;t just plant gardens; we craft ecosystems. Our landscape
             architecture respects the rugged honesty of the Australian bush,
             blending native endurance with refined design.
@@ -32,7 +32,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative">
+        <div className="lg:col-span-4 relative">
           <div className="aspect-4/5 bg-surface-container rounded-xl overflow-hidden editorial-shadow -rotate-2">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs0c8f0SQTm0GDbeJ92dXlsenCNeJ7KHuO73Bs9VQkXTpi-DCfGF0C_y5gA0nuC7zX0yXJjgGXXpD5Hg8eFMdLBQZRD1KRJ0fvO0DdjSzYpcqEBs6aSeJnS67gl9QrpYfSrKx6FFc1dsprAe9ZW-yIxtVXrimyn1B6C2_meNlkyZ0iTgGU6nSrjod7g0FjGZhgc1k5WmghXDkcpeVuBXEGw8CxU9B1jP5EuTp8qrW8h62aqW-F5dTf0Y3VQihg3EXogB_dgZlARdwW"
