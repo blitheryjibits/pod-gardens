@@ -7,9 +7,12 @@ export function ServicesSection() {
     <section className="bg-surface-container-low py-24 px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row items-end mb-16 gap-8">
           <div>
-            <span className="font-label text-sm uppercase tracking-widest text-secondary font-bold mb-4 block">
+            <span
+              className="font-label text-sm uppercase tracking-widest text-secondary font-bold mb-4 inline-block
+            relative before:absolute before:content-[''] before:-bottom-1 before:-right-6 before:w-18 before:h-0.5 before:bg-secondary"
+            >
               Our Expertise
             </span>
             <h2 className="font-headline text-5xl text-primary font-bold">
@@ -17,7 +20,7 @@ export function ServicesSection() {
             </h2>
           </div>
 
-          <p className="font-body text-on-surface-variant max-w-md italic">
+          <p className="font-body text-on-surface-variant max-w-md italic ml-[calc(50%-16rem)]">
             A garden is a long-term conversation...
           </p>
         </div>
