@@ -114,17 +114,17 @@ export default function Process() {
       {/* <!-- Step 3: Concept Design --> */}
       <section className="bg-primary text-on-primary py-24">
         <div className="max-w-8xl mx-auto px-8 lg:px-16">
-          <div className="text-center mb-16">
+          <div className=" mb-16">
             <div className="inline-block bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-bold tracking-widest mb-6 font-label uppercase">
               Final Step
             </div>
-            <h2 className="font-headline text-5xl md:text-7xl mb-6">
+            <h2 className="text-center font-headline text-5xl md:text-7xl mb-6">
               Concept Design &amp; Quote
             </h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 items-center">
             <div className="">
-              <div className="bg-white/10 backdrop-blur-md p-10 rounded-2xl border border-white/10">
+              <div className="bg-white/10 p-10 rounded-2xl border border-white/10">
                 <p className="font-body text-xl mb-8 leading-relaxed text-on-primary-container">
                   Following the site visit, Paula creates a tailored concept
                   that bridges the gap between your dreams and the physical
@@ -169,7 +169,7 @@ export default function Process() {
                 </button>
               </div>
             </div>
-            <div className="relative w-full aspect-video">
+            <div className="relative w-full aspect-5/4 lg:aspect-4/5 ">
               <Image
                 fill
                 alt="Concept drawing"
