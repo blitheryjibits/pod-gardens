@@ -8,7 +8,6 @@ export const Hero = () => {
         <span className="text-secondary bg-accent/40 backdrop-blur-xs px-4 py-1 rounded-xl font-label font-bold uppercase tracking-[0.2em] text-sm md:text-md">
           Portfolio
         </span>
-        <div className="z-10 h-0.5 w-24 bg-outline-variant"></div>
       </div>
       <div className="relative z-10">
         <h1 className="relative col-span-1 md:col-span-8 font-headline -tracking-[3px] text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-on-tertiary leading-tight">
