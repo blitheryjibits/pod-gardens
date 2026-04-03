@@ -189,23 +189,41 @@ export default function Process() {
               Great gardens don&apos;t just happen; they are grown from a
               well-tended plan.
             </h3>
-            <div className="flex flex-col md:flex-row gap-8 items-center justify-between border-t border-outline-variant pt-12">
-              <p className="font-body text-on-surface-variant max-w-sm">
+            <div className="flex flex-col gap-8 items-center justify-around border-t border-outline-variant pt-12">
+              <p className="font-body text-on-surface-variant max-w-sm text-center">
                 Ready to start? Let&apos;s take the first step together on your
                 Australian landscape journey.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-4 lg:gap-6">
                 <a
-                  className="text-primary font-bold font-body text-lg border-b-2 border-secondary pb-1 hover:text-secondary transition-all"
+                  className="
+    relative inline-block text-primary font-bold font-body text-lg
+    border-b-2 border-secondary px-2 pt-2 hover:text-white transition-colors duration-600
+    overflow-hidden
+    after:absolute after:inset-0 after:content-[''] after:bg-secondary after:rounded-t-md
+    after:translate-y-full after:transition-transform after:duration-300
+    hover:after:translate-y-0
+  "
                   href="#"
                 >
-                  View Our Portfolio
+                  <span className="relative z-10 cursor-pointer">
+                    View Our Portfolio
+                  </span>
                 </a>
                 <a
-                  className="text-primary font-bold font-body text-lg border-b-2 border-secondary pb-1 hover:text-secondary transition-all"
+                  className="
+    relative inline-block text-primary font-bold font-body text-lg
+    border-b-2 border-secondary px-2 pt-2 hover:text-white transition-colors duration-600
+    overflow-hidden
+    after:absolute after:inset-0 after:content-[''] after:bg-secondary after:rounded-t-md
+    after:translate-y-full after:transition-transform after:duration-300
+    hover:after:translate-y-0
+  "
                   href="#"
                 >
-                  Meet the Team
+                  <span className="relative z-10 cursor-pointer">
+                    Meet the Team
+                  </span>
                 </a>
               </div>
             </div>

@@ -29,7 +29,7 @@ export function Navbar() {
         </span>
 
         {/* Mobile hamburger menu */}
-        <div className="relative h-100% bg-transparent flex-1">
+        <div className="h-100% bg-transparent flex-1">
           <input
             title="sidebar-active"
             type="checkbox"
@@ -48,7 +48,7 @@ export function Navbar() {
 
           {/* menu list */}
           <ul
-            className={`absolute top-0 -right-full w-full h-screen
+            className={`absolute top-0 -right-full w-1/2 md:w-full h-fit
               flex flex-col gap-4
               bg-background/60 backdrop-blur-xs 
               peer-checked:right-0
@@ -58,7 +58,7 @@ export function Navbar() {
               
               `}
           >
-            <li className="ml-auto md:hidden">
+            <li className="ml-auto mr-4 mt-4 md:hidden">
               <label htmlFor="sidebar-active">
                 <X />
               </label>
@@ -71,7 +71,7 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`py-1 px-2 rounded-md block text-center ${linkClass(item.href)}`}
+                  className={`py-1 md:px-2 rounded-md block text-center ${linkClass(item.href)}`}
                 >
                   {item.label}
                 </Link>
