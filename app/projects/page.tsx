@@ -1,16 +1,19 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/hero/HeroProjects";
+import Image from "next/image";
 
 export default function Services() {
   return (
     <>
-      <Navbar />
-      <main className="pt-32 pb-24 max-w-8xl mx-auto px-16">
+      <header>
+        <Navbar />
+      </header>
+      <main className="pt-32 pb-24 max-w-8xl mx-auto md:px-16">
         <Hero />
 
         <section className="max-w-8xl mx-auto px-8 mb-16">
-          <div className="flex flex-wrap gap-4 items-center border-b border-outline-variant/20 pb-8">
+          <div className="flex flex-wrap gap-4 items-center justify-center border-b border-outline-variant/20 pb-8">
             <button className="px-5 py-2 bg-primary text-on-primary rounded-full font-body text-sm font-medium transition-all">
               All Projects
             </button>
@@ -30,8 +33,9 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             {/* <!-- Project 1: The Ironbark Retreat (Rural) --> */}
             <div className="md:col-span-8 group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[16/10] bg-surface-container mb-6">
-                <img
+              <div className="relative overflow-hidden aspect-16/10 bg-surface-container mb-6">
+                <Image
+                  fill
                   alt="The Ironbark Retreat"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   data-alt="Wide angle landscape shot of a modern timber cabin nestled in Australian bushland with silver-grey eucalyptus trees and native grasses"
@@ -64,16 +68,17 @@ export default function Services() {
               </div>
             </div>
             {/* <!-- Project 2: The Coastal Banksia (Coastal) - Portrait-ish --> */}
-            <div className="md:col-span-4 group cursor-pointer mt-0 md:mt-24">
-              <div className="relative overflow-hidden aspect-[4/5] bg-surface-container mb-6">
-                <img
+            <div className="md:col-span-4 group cursor-pointer mt-0 md:mt-24 md:mb-6">
+              <div className="relative overflow-hidden aspect-4/5 bg-surface-container mb-6">
+                <Image
+                  fill
                   alt="The Coastal Banksia"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   data-alt="Modern beachfront garden with sandstone steps, flowering banksia plants, and soft ocean mist in the background lighting"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqleMsCYqWZLZn58rVwrWGo_j4izMYNdkYqtnu4dQsbTgu-WYUXvClCSCux2uhaKf3q9WMNNuefTqLG9Zv05IYuWnuUDLp19xNXRZ8NMRSoEMz-kMswvWRYuYV7ankJegxHpVZIYKhLDFeWBPRsrLGsstLLx1KQa2hLN3XtVXZ83QrEwHhRBi8Xpdf5-zv8Lm81LRMlvfPHvuVEGzbS3Gt1XZNggzJSUwvG5O5uPQhoHmTxWIbgfdoZltY55fixg6YoU-u4V0dnTWO"
                 />
-                <div className="absolute top-6 left-6">
-                  <span className="bg-surface/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">
+                <div className="absolute top-6 left-6 md:mr-6">
+                  <span className="inline-block text-center bg-surface/90 backdrop-blur-sm px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase text-primary">
                     Beachfront Garden
                   </span>
                 </div>
@@ -98,10 +103,11 @@ export default function Services() {
             </div>
             {/* <!-- Project 3: River Red Homestead (Family Estate) --> */}
             <div className="md:col-span-5 group cursor-pointer">
-              <div className="relative overflow-hidden aspect-[4/3] bg-surface-container mb-6">
-                <img
+              <div className="relative overflow-hidden aspect-4/3 bg-surface-container mb-6">
+                <Image
+                  fill
                   alt="River Red Homestead"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   data-alt="Large family estate home with sprawling green lawns and ancient river red gum trees under a bright blue Australian sky"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4fZSUscRMY09nb8aR2UbEvpT0O7Qf8KagOsdTvOd3MmPXsWjE7TX4E9F0GSKQy90p3tsO77FB2aB-vCnYywlrdm-iS4R3gZmPM-TXQfBRGQL3Q0jM94M2I5scZ_GG4iX_PDPK15kfiE5NztHCM5RgQZeH3Rw80-xYLWsTBmfII4pYxn28it0u2NYNEenjXagKXB3acPkNd7bOX3n3CFK4Z3f9NUtiYI5NN7Xr2gUmNnLOUy0kkCQ1Db47RGOT1ACwKPleumqzBeCG"
                 />
@@ -130,11 +136,12 @@ export default function Services() {
               </div>
             </div>
             {/* <!-- Project 4: High Country Oasis (Mountain) --> */}
-            <div className="md:col-span-7 group cursor-pointer -mt-0 md:-mt-12">
+            <div className="md:col-span-7 group cursor-pointer mt-0 md:-mt-12">
               <div className="relative overflow-hidden aspect-square bg-surface-container mb-6">
-                <img
+                <Image
+                  fill
                   alt="High Country Oasis"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                   data-alt="Mountain garden with rugged stone retaining walls, alpine shrubs, and dramatic sunset colors reflecting off a small garden pool"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9KDDuGFKAt4EDZj57GMUVZfRO1ldA4IkmXuQIXGfViW11ey_Huck9Sz9U7KZbrPLwNavLtGlxhVRJafIIYHNM803Ao44sT6iUGe-I2ITxAWFmKcWUXwDfsEgHcbOIpx6FHHXFenPk6V8dM8RbwQtoj0KjMkoY28T2vb5Cir3TSVfMVhdBhGcFYRNt-UdA3vB-4TU6TSUb9r8XXbJTafdvDII_3PbNRM8wFrD7aUbXpOpMJ5kWdEEnnGz5Cxsb-yP7QnJ7bsefMoNR"
                 />
@@ -182,7 +189,7 @@ export default function Services() {
           <div className="bg-primary p-16 md:p-24 rounded-lg overflow-hidden relative">
             {/* <!-- Abstract Texture Overlay --> */}
             <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')]"></div>
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="max-w-xl text-center md:text-left">
                 <h2 className="text-4xl md:text-6xl font-headline text-on-primary leading-tight mb-6">
                   Ready to start your own transformation?
@@ -194,7 +201,7 @@ export default function Services() {
               </div>
               <div>
                 <a
-                  className="inline-block bg-secondary text-on-secondary px-10 py-5 rounded-md font-body font-bold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-xl shadow-black/10"
+                  className="inline-block text-center bg-secondary text-on-secondary px-10 py-5 rounded-md font-body font-bold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-xl shadow-black/10"
                   href="#"
                 >
                   Begin Consultation

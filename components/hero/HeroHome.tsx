@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative px-8 py-20 lg:py-24 max-w-8xl mx-auto overflow-hidden">
       <div className="grid lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7 ml-8">
+        <div className="lg:col-span-7 lg:pr-2">
           <h1 className="font-headline text-6xl lg:text-8xl text-primary leading-none font-bold mb-8">
             Built for the <br />
             <span className="italic font-normal md:ml-24">Australian</span>{" "}
@@ -18,7 +18,7 @@ export function Hero() {
             blending native endurance with refined design.
           </p>
 
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-6 justify-center">
             <button className="bg-secondary text-on-secondary px-8 py-4 rounded-md font-bold shadow-lg hover:brightness-110 transition-all flex items-center gap-2">
               Start Your Project
               <span className="material-symbols-outlined text-sm">
@@ -42,7 +42,7 @@ export function Hero() {
             />
           </div>
 
-          <div className="absolute -bottom-8 -left-12 hidden lg:block w-64 aspect-square bg-surface-container-high rounded-xl overflow-hidden editorial-shadow rotate-3 p-2">
+          <div className="absolute -bottom-24 -left-12 hidden lg:block w-64 aspect-square bg-surface-container-high rounded-xl overflow-hidden editorial-shadow rotate-3">
             <Image
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFbb-DPrzA3rc0LmXrNPTHxl3_JpDJwEQYUHytnHanZwQdogQWbDDqZBsbnHPpuFam9QhJNC4pjfWYM0OqW1Bd7owG_ALGQpC_1jcObXsOS7wBKQIJ3VoM-8vU0CqKvU21YnE5qgjkuOVyBC4mRDxSqFk08GxvVtvCv0HXiFEryr5uH4mMvimR3dnY1N43OHayTA2ZLOW9S1JHwWzy2u3sBM7rJCMM_aH4pYao3djdTrZKTshWtBTuM2ewrOGeg9yGu4i8iRs1yvym"
               alt="Close up flora"

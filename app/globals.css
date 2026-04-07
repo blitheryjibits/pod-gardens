@@ -292,6 +292,11 @@
 
 /* Animation utilities */
 @layer utilities {
+  .box-decoration-clone {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
   .text-outline-white {
     text-shadow:
       -1px -1px 0 #fff,

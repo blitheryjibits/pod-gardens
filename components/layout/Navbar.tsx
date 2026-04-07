@@ -54,7 +54,7 @@ export function Navbar() {
               peer-checked:right-0
               transtition-all duration-300
               md:max-w-fit md:flex md:flex-row md:right-0 md:h-full
-              md:gap-0 md:pt-0 md:pr-4 md:text-sm
+              md:gap-0 md:pt-0 md:pr-4 md:text-sm md:bg-transparent md:backdrop-blur-none
               
               `}
           >

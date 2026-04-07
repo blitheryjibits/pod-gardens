@@ -1,7 +1,7 @@
 export const Hero = () => {
   return (
     <section
-      className="relative py-24 bg-[url('/gardens/hill-st/OFF-FORM-CONCRETE-AND-FIREPIT-1.jpg')] bg-cover bg-center rounded-xl overflow-hidden mb-16 p-8 
+      className="relative py-24 bg-[url('/gardens/hill-st/OFF-FORM-CONCRETE-AND-FIREPIT-1.jpg')] bg-cover bg-center md:rounded-xl overflow-hidden mb-16 p-8 
     z-10 before:z-0 before:pointer-events-none before:absolute before:inset-0 before:bg-linear-to-tr before:from-black/60 before:to-transparent"
     >
       <div className="z-10 flex flex-row md:flex-row items-baseline gap-2 mb-4 md:mb-8 ">
