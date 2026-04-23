@@ -1,7 +1,7 @@
 // components/contact/ContactSection.tsx
 export function ContactSection() {
   return (
-    <section className="py-24 px-8 max-w-7xl mx-auto">
+    <section id="contact-section" className="py-24 px-8 max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-20 items-start">
         <div>
           <span className="font-label text-sm uppercase tracking-widest text-secondary font-bold mb-4 block">

@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero/HeroAbout";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -138,7 +139,7 @@ export default function About() {
                   <div className="aspect-video bg-primary-container rounded-lg overflow-hidden relative">
                     <Image
                       fill
-                      className="w-full h-full object-cover opacity-90"
+                      className="object-cover  opacity-90"
                       alt="Two professional landscape designers standing in a lush Australian garden, dressed in earthy linen and workwear, natural lighting"
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1FT1gz8FOuemNOrUTZVJIiOpS23QUNBpebv8Z4Jdkf8e77nzrAFLttaZ4Tmx926xyvQ5CrIECQfNpZd3pCaNpCyRKEo8cADA3gZGvSEu7Akhd_Sqtx9HKDhW-SP9bPkueXVmRs3LBDpuSY-tDT2uKEiEj0GHActLnr374KzDIT3HGe2iOTutQJDmsV4fBOQ2EQw7UrXwQfDwAGzvNRmg-wEYcuesG4KB0ixQ6LAtgYbH4SIkYdFTVfgxXl0tHtdrQmbAS7GjCEvjv"
                     />
@@ -169,7 +170,7 @@ export default function About() {
                     fill
                     className="object-cover"
                     alt="Portrait of a woman with short hair and a warm smile, wearing a green utility shirt"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGQqwzly7ZBNvlK1nWHVx-PKCj04vM9vCUVf3dWYQdnMHaipIxz5G5fR93ueJxkcxDm-dUxKeLL-xg8dDydMwYnxKImoo5Ph-LeNcHFkk8E4uGKVVymH5eHj0L8HGuKsvp-qQwkUUXUIrtoTlslyMgxalbyGImp0Bn-7LCfH5IqkVPMqcjUOuW0Y4UYz22v9CUXCzcwtm28X7TfZByKZ9VMLco1AqK1-QBJUzU26ZhHpJAVopcpck7rAmvlqE7Oiq8FEWmZGML3T1C"
+                    src="/staff/happy-paula-avatar.jpeg"
                   />
                 </div>
                 <h4 className="text-xl font-bold text-primary mb-1">
@@ -190,7 +191,7 @@ export default function About() {
                     fill
                     className="object-cover"
                     alt="Portrait of a rugged man with silver hair and a work-worn cap, friendly expression"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdptC9M7ENBOQiEC8GIfkV7V9wI9f5-JL5CIgIQrAaoXyaZDSgvQKBQ5L0zhoFH4HrEj7obrq0P-fBwMdpknqphZEB-6XgRWUKyigVySuvrDHBhR4_vraJdQJNDRbFuv-e1SbXM-Y_whfIxjgn6TjkuncnZW80FleY2xhJMOzTsAkiLqQ_3jhrLZi9bXigaXwON9S1Uzy_LLwdSBIpfZ2a40BWtTSC_x8NlDVoc92en9yRZKpSLk9G6R0g6J2K_ra9a0mqTMBdw5yq"
+                    src="/staff/happy-steve-avatar.jpeg"
                   />
                 </div>
                 <h4 className="text-xl font-bold text-primary mb-1">
@@ -245,14 +246,20 @@ export default function About() {
                 always open to traveling for clients who share our vision for a
                 more integrated, natural world.
               </p>
-              <div className="flex gap-4 items-center">
-                <div className="w-12 h-px bg-secondary"></div>
-                <span className="text-primary font-bold text-lg">
-                  Inquire about your location
-                </span>
-                <span className="material-symbols-outlined text-secondary">
-                  arrow_forward
-                </span>
+              <div>
+                <Link href="/#contact-section" className="inline-block">
+                  <div className="flex gap-4 items-center cursor-pointer w-auto">
+                    <div className="w-12 h-px bg-secondary"></div>
+
+                    <span className="text-primary font-bold text-lg cursor-pointer">
+                      Inquire about your location
+                    </span>
+
+                    <span className="material-symbols-outlined text-secondary cursor-pointer">
+                      arrow_forward
+                    </span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="w-full md:w-1/2 relative">

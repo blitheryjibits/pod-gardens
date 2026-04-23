@@ -10,8 +10,9 @@ export const Hero = () => {
           Cultivating Clarity
         </h1>
         <p className="text-on-surface-variant font-body text-lg xl:text-xl max-w-2xl mx-auto">
-          Practical answers to common curiosities about landscape architecture
-          and construction in the Australian landscape.
+          Practical answers to common questions about our process and services.
+          For more detail feel free to reach out to our team directly through
+          email or by phone.
         </p>
       </div>
     </section>

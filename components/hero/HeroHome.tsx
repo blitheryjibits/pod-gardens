@@ -1,5 +1,7 @@
 // components/hero/Hero.tsx
+
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -19,16 +21,22 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-6 justify-center">
-            <button className="bg-secondary text-on-secondary px-8 py-4 rounded-md font-bold shadow-lg hover:brightness-110 transition-all flex items-center gap-2">
+            <Link
+              href="#contact-section"
+              className="bg-secondary text-on-secondary px-8 py-4 rounded-md font-bold shadow-lg hover:brightness-110 transition-all flex items-center gap-2"
+            >
               Start Your Project
               <span className="material-symbols-outlined text-sm">
                 arrow_forward
               </span>
-            </button>
+            </Link>
 
-            <button className="text-primary font-bold border-b-4 border-transparent hover:border-b-secondary transition-colors duration-300 py-4">
+            <Link
+              href="/projects"
+              className="text-primary font-bold border-b-4 border-transparent hover:border-b-secondary transition-colors duration-300 py-4"
+            >
               View Recent Works
-            </button>
+            </Link>
           </div>
         </div>
 

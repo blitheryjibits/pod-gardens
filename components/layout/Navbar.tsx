@@ -78,9 +78,12 @@ export function Navbar() {
               </li>
             ))}
             <li className="hidden md:flex items-center">
-              <button className="bg-primary text-on-primary text-sm lg:text-md text-nowrap px-3 lg:px-6 py-1 lg:py-2.5 rounded-md lg:font-bold font-semibold hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out">
+              <Link
+                href="/#contact-section"
+                className="bg-primary text-on-primary text-sm lg:text-md text-nowrap px-3 lg:px-6 py-1 lg:py-2.5 rounded-md lg:font-bold font-semibold hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out"
+              >
                 Get Started
-              </button>
+              </Link>
             </li>
           </ul>
         </div>

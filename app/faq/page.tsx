@@ -152,9 +152,9 @@ export default function FAQ() {
               </p>
               <a
                 className="text-secondary font-bold hover:underline"
-                href="mailto:hello@podgardens.com.au"
+                href="mailto:podgardens@podgardens.com.au"
               >
-                hello@podgardens.com.au
+                podgardens@bigpond.com.au
               </a>
             </div>
           </div>

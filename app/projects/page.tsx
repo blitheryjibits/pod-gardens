@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/hero/HeroProjects";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -32,7 +33,7 @@ export default function Services() {
         <section className="max-w-8xl mx-auto px-8 mb-32">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             {/* <!-- Project 1: The Ironbark Retreat (Rural) --> */}
-            <div className="md:col-span-8 group cursor-pointer">
+            <div className="md:col-span-8 group">
               <div className="relative overflow-hidden aspect-16/10 bg-surface-container mb-6">
                 <Image
                   fill
@@ -61,14 +62,14 @@ export default function Services() {
                   href="#"
                 >
                   View Case Study{" "}
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm cursor-pointer">
                     arrow_forward
                   </span>
                 </a>
               </div>
             </div>
             {/* <!-- Project 2: The Coastal Banksia (Coastal) - Portrait-ish --> */}
-            <div className="md:col-span-4 group cursor-pointer mt-0 md:mt-24 md:mb-6">
+            <div className="md:col-span-4 group mt-0 md:mt-24 md:mb-6">
               <div className="relative overflow-hidden aspect-4/5 bg-surface-container mb-6">
                 <Image
                   fill
@@ -95,14 +96,14 @@ export default function Services() {
                   href="#"
                 >
                   View Case Study{" "}
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm cursor-pointer">
                     arrow_forward
                   </span>
                 </a>
               </div>
             </div>
             {/* <!-- Project 3: River Red Homestead (Family Estate) --> */}
-            <div className="md:col-span-5 group cursor-pointer">
+            <div className="md:col-span-5 group ">
               <div className="relative overflow-hidden aspect-4/3 bg-surface-container mb-6">
                 <Image
                   fill
@@ -129,14 +130,14 @@ export default function Services() {
                   href="#"
                 >
                   View Case Study{" "}
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm cursor-pointer">
                     arrow_forward
                   </span>
                 </a>
               </div>
             </div>
             {/* <!-- Project 4: High Country Oasis (Mountain) --> */}
-            <div className="md:col-span-7 group cursor-pointer mt-0 md:-mt-12">
+            <div className="md:col-span-7 group mt-0 md:-mt-12">
               <div className="relative overflow-hidden aspect-square bg-surface-container mb-6">
                 <Image
                   fill
@@ -163,7 +164,7 @@ export default function Services() {
                   href="#"
                 >
                   View Case Study{" "}
-                  <span className="material-symbols-outlined text-sm">
+                  <span className="material-symbols-outlined text-sm cursor-pointer">
                     arrow_forward
                   </span>
                 </a>
@@ -200,12 +201,12 @@ export default function Services() {
                 </p>
               </div>
               <div>
-                <a
+                <Link
+                  href="/#contact-section"
                   className="inline-block text-center bg-secondary text-on-secondary px-10 py-5 rounded-md font-body font-bold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all shadow-xl shadow-black/10"
-                  href="#"
                 >
                   Begin Consultation
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -28,7 +28,7 @@ export const Hero = () => {
           </div>
           <div className="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 max-w-70 hidden md:block">
             <p className="text-sm font-body italic text-tertiary">
-              We don&amp;t just build gardens; we choreograph ecosystems that
+              We don&apos;t just build gardens, we choreograph ecosystems that
               thrive in the Australian sun.
             </p>
           </div>
