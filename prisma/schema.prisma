@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model UserProfile {
+  id        String    @id @default(uuid())
+  email     String    @unique
+  fullName  String
+  phone     String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  bookings  Booking[]
+}
+
+model AppointmentType {
+  id              String    @id @default(uuid())
+  name            String
+  durationMinutes Int       @default(120)
+  description     String?
+  bookings        Booking[]
+}
+
+model Booking {
+  id                String          @id @default(uuid())
+  userId            String
+  appointmentTypeId String
+  startTime         DateTime        @unique
+  notes             String?
+  status            String          @default("confirmed")
+  createdAt         DateTime        @default(now())
+  appointmentType   AppointmentType @relation(fields: [appointmentTypeId], references: [id])
+  user              UserProfile     @relation(fields: [userId], references: [id])
+}
+
+model AvailabilityRule {
+  id        String @id @default(uuid())
+  dayOfWeek Int
+  startTime String
+}
+
+model TimeOff {
+  id        String   @id @default(uuid())
+  startDate DateTime
+  endDate   DateTime
+  reason    String?
+}
