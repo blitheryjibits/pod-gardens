@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, Manrope, Geist, Geist_Mono } from "next/font/google";
-
 import "./globals.css";
+import { Toaster } from "sonner";
 
 export const newsreader = Newsreader({
   subsets: ["latin"],
@@ -54,6 +54,7 @@ export default function RootLayout({
         className={`${newsreader.variable} ${manrope.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );
