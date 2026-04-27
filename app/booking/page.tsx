@@ -18,32 +18,29 @@ export default function BookingPage() {
   const [notes, setNotes] = useState("");
 
   const handleSubmit = async () => {
-    if (!selectedDate || !selectedTime) {
-      toast.error("Please select a date and time");
-      return;
-    }
-
-    if (!fullName || !email) {
-      toast.error("Please fill in your name and email");
-      return;
-    }
-
     const payload = {
       fullName,
       email,
       notes,
-      date: selectedDate.toISOString(),
+      date: selectedDate?.toISOString(),
       time: selectedTime,
+      appointmentTypeId: "default-type",
     };
 
-    try {
-      // TODO: Replace with your booking API route
-      console.log("Submitting booking:", payload);
+    const res = await fetch("/api/bookings", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
 
-      toast.success("Booking submitted successfully!");
-    } catch (err) {
-      toast.error("Failed to submit booking");
+    const data = await res.json();
+
+    if (!data.success) {
+      toast(data.error);
+      return;
     }
+
+    toast("Booking confirmed!");
   };
 
   return (
