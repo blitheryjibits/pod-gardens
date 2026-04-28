@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import Link from "next/link";
 
 export default function BookingPage() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
@@ -61,6 +62,8 @@ export default function BookingPage() {
             onDateChange={setSelectedDate}
             onTimeChange={setSelectedTime}
           />
+
+          <Link href="/appointments">already made a booking?</Link>
 
           {/* Booking Form */}
           <div className="w-full max-w-lg space-y-4 border rounded-lg p-6 shadow-sm">
