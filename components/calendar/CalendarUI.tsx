@@ -64,16 +64,22 @@ export function CalendarUI({
           selected={selectedDate}
           onSelect={handleDateSelect}
           disabled={(date) => {
+            const today = new Date();
             const key = date.toISOString().split("T")[0];
-            return bookedDateStrings.has(key);
+            return bookedDateStrings.has(key) || date < today;
           }}
           modifiers={{
             booked: bookedDates,
+            past: (date, today = new Date()) => date < today,
           }}
           modifiersStyles={{
             booked: {
               textDecoration: "line-through",
-              opacity: 0.5,
+              opacity: 0.6,
+            },
+            past: {
+              opacity: 0.6,
+              textDecoration: "line-through",
             },
           }}
           className="mx-auto"
