@@ -68,11 +68,8 @@ export default function ClientAppointmentsPage() {
                 className="border rounded-lg p-6 shadow-sm space-y-2"
               >
                 <p className="text-lg font-semibold">
-                  {new Date(appt.startTime).toLocaleDateString()} —{" "}
-                  {new Date(appt.startTime).toLocaleTimeString([], {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}
+                  {new Date(appt.appointmentDate).toLocaleDateString()} —{" "}
+                  {appt.appointmentTime}
                 </p>
 
                 <p className="text-sm text-muted-foreground">
