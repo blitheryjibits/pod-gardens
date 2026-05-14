@@ -29,12 +29,15 @@ model Booking {
   id                String          @id @default(uuid())
   userId            String
   appointmentTypeId String
-  startTime         DateTime        @unique
+  appointmentDate   DateTime        @default(now())
+  appointmentTime   String
   notes             String?
   status            String          @default("confirmed")
   createdAt         DateTime        @default(now())
   appointmentType   AppointmentType @relation(fields: [appointmentTypeId], references: [id])
   user              UserProfile     @relation(fields: [userId], references: [id])
+
+  @@unique([appointmentDate, appointmentTime])
 }
 
 model AvailabilityRule {
