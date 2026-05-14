@@ -79,7 +79,7 @@ export function Navbar() {
             ))}
             <li className="hidden md:flex items-center">
               <Link
-                href="/#contact-section"
+                href="/booking"
                 className="bg-primary text-on-primary text-sm lg:text-md text-nowrap px-3 lg:px-6 py-1 lg:py-2.5 rounded-md lg:font-bold font-semibold hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out"
               >
                 Get Started

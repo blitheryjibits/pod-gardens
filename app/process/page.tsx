@@ -1,12 +1,9 @@
 import { Hero } from "@/components/hero/HeroProcess";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 
 export default function Process() {
   return (
     <main>
-      <Navbar />
       <Hero />
       {/* <!-- Step 1: Advisory --> */}
       <section className="bg-surface-container-low py-24 mb-32">
@@ -230,7 +227,6 @@ export default function Process() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   );
 }

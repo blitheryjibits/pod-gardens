@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Newsreader, Manrope, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 
 export const newsreader = Newsreader({
   subsets: ["latin"],
@@ -53,7 +55,11 @@ export default function RootLayout({
       <body
         className={`${newsreader.variable} ${manrope.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>
+          <Navbar />
+        </header>
         {children}
+        <Footer />
         <Toaster richColors position="top-center" />
       </body>
     </html>

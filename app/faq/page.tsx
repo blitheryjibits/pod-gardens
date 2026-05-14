@@ -1,7 +1,5 @@
 "use client";
 import { Hero } from "@/components/hero/HeroFaq";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { ChevronDown } from "lucide-react";
 
 import { useState } from "react";
@@ -71,108 +69,100 @@ export default function FAQ() {
   };
 
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <Hero />
+    <main>
+      <Hero />
 
-        {/* <!-- FAQ Accordion Section --> */}
-        <section className="max-w-3xl mx-auto py-16 px-8 md:px-16">
-          <div className="relative h-6 mb-2">
-            <span className="text-sm font-body absolute -left-3 md:-left-6 text-primary after:content-[''] after:w-24 after:h-px after:bg-secondary after:absolute after:bottom-0 after:-right-6">
-              Check out our
-            </span>
-          </div>
-          <h1 className="text-4xl font-headline mb-8 lg:mb-12 text-primary">
-            FAQs
-          </h1>
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className={`accordion-item border-b border-outline-variant pb-4 ${
-                  activeIndex === index ? "active" : ""
-                }`}
+      {/* <!-- FAQ Accordion Section --> */}
+      <section className="max-w-3xl mx-auto py-16 px-8 md:px-16">
+        <div className="relative h-6 mb-2">
+          <span className="text-sm font-body absolute -left-3 md:-left-6 text-primary after:content-[''] after:w-24 after:h-px after:bg-secondary after:absolute after:bottom-0 after:-right-6">
+            Check out our
+          </span>
+        </div>
+        <h1 className="text-4xl font-headline mb-8 lg:mb-12 text-primary">
+          FAQs
+        </h1>
+        <div className="space-y-6">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`accordion-item border-b border-outline-variant pb-4 ${
+                activeIndex === index ? "active" : ""
+              }`}
+            >
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex text-left font-bold text-lg text-primary"
               >
-                <button
-                  onClick={() => toggle(index)}
-                  className="w-full flex text-left font-bold text-lg text-primary"
-                >
-                  <span className="mr-auto">{faq.question}</span>
-                  <ChevronDown
-                    className={`
+                <span className="mr-auto">{faq.question}</span>
+                <ChevronDown
+                  className={`
             h-5 w-5 text-secondary transition-transform duration-300
             ${activeIndex === index ? "rotate-180" : "rotate-0"}
           `}
-                  />
-                </button>
-                <div
-                  className={`mt-2 text-on-tertiary transition-all duration-400 ${
-                    activeIndex === index
-                      ? "max-h-screen opacity-100"
-                      : "max-h-0 opacity-0 overflow-hidden"
-                  }`}
-                >
-                  <p className="pt-2 text-primary">{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* <!-- Footer CTA Section --> */}
-        <section className="mt-24 lg:pt-24 border-t border-outline-variant/10 text-center">
-          <div className="bg-surface-container-low p-12 rounded-lg">
-            <h2 className="text-4xl text-primary mb-6 leading-tight font-normal">
-              Ready to start the conversation?
-            </h2>
-            <p className="text-tertiary mb-10 max-w-xl mx-auto">
-              Our first step is always a conversation about how you live and how
-              you want to move through your garden.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-secondary text-on-secondary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity">
-                Request a Site Visit
+                />
               </button>
-              <button className="bg-primary text-on-primary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                View Recent Work
-                <span
-                  className="material-symbols-outlined text-sm"
-                  data-icon="arrow_forward"
-                >
-                  arrow_forward
-                </span>
-              </button>
-            </div>
-            <div className="mt-8">
-              <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-2">
-                Still have questions?
-              </p>
-              <a
-                className="text-secondary font-bold hover:underline"
-                href="mailto:podgardens@podgardens.com.au"
+              <div
+                className={`mt-2 text-on-tertiary transition-all duration-400 ${
+                  activeIndex === index
+                    ? "max-h-screen opacity-100"
+                    : "max-h-0 opacity-0 overflow-hidden"
+                }`}
               >
-                podgardens@bigpond.com.au
-              </a>
+                <p className="pt-2 text-primary">{faq.answer}</p>
+              </div>
             </div>
-          </div>
-        </section>
-
-        {/* <!-- Decorative Botanical Graphic --> */}
-        <div className="fixed bottom-0 right-0 p-12 opacity-5 select-none pointer-events-none">
-          <span
-            className="material-symbols-outlined text-[20rem] leading-none text-primary"
-            data-icon="forest"
-          >
-            forest
-          </span>
+          ))}
         </div>
-      </main>
-      <footer>
-        <Footer />
-      </footer>
-    </>
+      </section>
+
+      {/* <!-- Footer CTA Section --> */}
+      <section className="mt-24 lg:pt-24 border-t border-outline-variant/10 text-center">
+        <div className="bg-surface-container-low p-12 rounded-lg">
+          <h2 className="text-4xl text-primary mb-6 leading-tight font-normal">
+            Ready to start the conversation?
+          </h2>
+          <p className="text-tertiary mb-10 max-w-xl mx-auto">
+            Our first step is always a conversation about how you live and how
+            you want to move through your garden.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-secondary text-on-secondary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity">
+              Request a Site Visit
+            </button>
+            <button className="bg-primary text-on-primary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+              View Recent Work
+              <span
+                className="material-symbols-outlined text-sm"
+                data-icon="arrow_forward"
+              >
+                arrow_forward
+              </span>
+            </button>
+          </div>
+          <div className="mt-8">
+            <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+              Still have questions?
+            </p>
+            <a
+              className="text-secondary font-bold hover:underline"
+              href="mailto:podgardens@podgardens.com.au"
+            >
+              podgardens@bigpond.com.au
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* <!-- Decorative Botanical Graphic --> */}
+      <div className="fixed bottom-0 right-0 p-12 opacity-5 select-none pointer-events-none">
+        <span
+          className="material-symbols-outlined text-[20rem] leading-none text-primary"
+          data-icon="forest"
+        >
+          forest
+        </span>
+      </div>
+    </main>
   );
 }

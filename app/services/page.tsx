@@ -1,14 +1,9 @@
 import { Hero } from "@/components/hero/HeroServices";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import Image from "next/image";
 
 export default function Services() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main className="pt-32 pb-24 max-w-8xl mx-auto px-8 md:px-16">
         <Hero />
         {/* <!-- Service Section 01: Landscape Design --> */}
@@ -229,8 +224,6 @@ export default function Services() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }
