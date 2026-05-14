@@ -15,9 +15,8 @@ export async function POST(req: Request) {
     }
 
     // Convert date + time into a real DateTime range
-    const startTime = new Date(date);
-    const [hours, minutes] = time.split(":").map(Number);
-    startTime.setHours(hours, minutes, 0, 0);
+    const appointmentDate: Date = new Date(date);
+    const appointmentTime: string = time;
 
     // Get appointment type duration (fallback 60 minutes)
     const appointmentType = await prisma.appointmentType.findUnique({
@@ -41,7 +40,8 @@ export async function POST(req: Request) {
     // --- Check if slot is already booked ---
     const existingBooking = await prisma.booking.findFirst({
       where: {
-        startTime,
+        appointmentDate,
+        appointmentTime,
       },
     });
 
@@ -60,7 +60,8 @@ export async function POST(req: Request) {
       data: {
         userId: user.id,
         appointmentTypeId: appointmentType?.id ?? "",
-        startTime,
+        appointmentDate,
+        appointmentTime,
         notes,
       },
     });
