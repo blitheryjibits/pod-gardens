@@ -135,8 +135,11 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-10 text-center text-xs text-secondary">
-        Site created with ❤️ by Robert
+      <div className="mt-10 text-center text-xs text-secondary group">
+        <Link href="https://thenooktech.com">
+          Site created by{" "}
+          <span className="group-hover:underline">Nooktech</span>
+        </Link>
       </div>
     </footer>
   );
