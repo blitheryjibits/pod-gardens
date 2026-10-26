@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import { Hero } from "@/components/hero/HeroAbout";
->>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/hero/HeroAbout";

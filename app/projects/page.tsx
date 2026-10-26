@@ -9,7 +9,6 @@ export default function Services() {
 
       <section className="max-w-8xl mx-auto px-8 mb-16">
         <div className="flex flex-wrap gap-4 items-center justify-center border-b border-outline-variant/20 pb-8">
-<<<<<<< HEAD
           <button
             type="button"
             className="px-5 py-2 bg-primary text-on-primary rounded-full font-body text-sm font-medium transition-all"
@@ -26,18 +25,12 @@ export default function Services() {
             type="button"
             className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all"
           >
-=======
-          <button className="px-5 py-2 bg-primary text-on-primary rounded-full font-body text-sm font-medium transition-all">
-            All Projects
-          </button>
-          <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
-            Residential
-          </button>
-          <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
->>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
             Rural
           </button>
-          <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
+          <button
+            type="button"
+            className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all"
+          >
             Coastal
           </button>
         </div>
@@ -72,7 +65,7 @@ export default function Services() {
               </div>
               <a
                 className="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body border-b border-secondary pb-0.5 group-hover:gap-4 transition-all"
-                href="#"
+                href="/projects"
               >
                 View Case Study{" "}
                 <span className="material-symbols-outlined text-sm cursor-pointer">
@@ -106,7 +99,7 @@ export default function Services() {
               </p>
               <a
                 className="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body border-b border-secondary pb-0.5 group-hover:gap-4 transition-all"
-                href="#"
+                href="/projects"
               >
                 View Case Study{" "}
                 <span className="material-symbols-outlined text-sm cursor-pointer">
@@ -140,7 +133,7 @@ export default function Services() {
               </p>
               <a
                 className="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body border-b border-secondary pb-0.5 group-hover:gap-4 transition-all"
-                href="#"
+                href="/projects"
               >
                 View Case Study{" "}
                 <span className="material-symbols-outlined text-sm cursor-pointer">
@@ -174,7 +167,7 @@ export default function Services() {
               </p>
               <a
                 className="inline-flex items-center gap-2 text-secondary font-bold text-sm font-body border-b border-secondary pb-0.5 group-hover:gap-4 transition-all"
-                href="#"
+                href="/projects"
               >
                 View Case Study{" "}
                 <span className="material-symbols-outlined text-sm cursor-pointer">
@@ -192,7 +185,10 @@ export default function Services() {
             Several transformative landscapes are currently in development
             across the southern highlands and coastal corridors.
           </p>
-          <button className="inline-flex items-center gap-2 text-primary font-bold text-sm font-body hover:gap-4 transition-all">
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 text-primary font-bold text-sm font-body hover:gap-4 transition-all"
+          >
             Load More Projects{" "}
             <span className="material-symbols-outlined">expand_more</span>
           </button>

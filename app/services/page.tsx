@@ -43,7 +43,7 @@ export default function Services() {
             </ul>
             <a
               className="inline-flex items-center gap-2 text-primary font-bold border-b-2 border-secondary pb-1 hover:text-secondary transition-all"
-              href="#"
+              href="/process"
             >
               Explore Design Process{" "}
               <span className="material-symbols-outlined text-sm">

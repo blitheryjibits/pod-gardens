@@ -1,8 +1,5 @@
 "use client";
-<<<<<<< HEAD
-=======
-import { Hero } from "@/components/hero/HeroFaq";
->>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
+
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Hero } from "@/components/hero/HeroFaq";
@@ -94,10 +91,7 @@ export default function FAQ() {
               }`}
             >
               <button
-<<<<<<< HEAD
                 type="button"
-=======
->>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
                 onClick={() => toggle(index)}
                 className="w-full flex text-left font-bold text-lg text-primary"
               >
@@ -134,23 +128,17 @@ export default function FAQ() {
             you want to move through your garden.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <button
               type="button"
               className="bg-secondary text-on-secondary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity"
             >
               Request a Site Visit
             </button>
+
             <button
               type="button"
               className="bg-primary text-on-primary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
             >
-=======
-            <button className="bg-secondary text-on-secondary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity">
-              Request a Site Visit
-            </button>
-            <button className="bg-primary text-on-primary px-10 py-4 rounded-md font-label font-bold tracking-tight hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
->>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
               View Recent Work
               <span
                 className="material-symbols-outlined text-sm"
