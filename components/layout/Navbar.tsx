@@ -1,8 +1,8 @@
 "use client";
 // components/layout/Navbar.tsx
+import { TextAlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { TextAlignJustify, X } from "lucide-react";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -50,12 +50,12 @@ export function Navbar() {
           <ul
             className={`absolute top-0 -right-full w-1/2 md:w-full h-fit
               flex flex-col gap-4
-              bg-background/60 backdrop-blur-xs 
+              bg-background/60 backdrop-blur-xs
               peer-checked:right-0
               transtition-all duration-300
               md:max-w-fit md:flex md:flex-row md:right-0 md:h-full
               md:gap-0 md:pt-0 md:pr-4 md:text-sm md:bg-transparent md:backdrop-blur-none
-              
+
               `}
           >
             <li className="ml-auto mr-4 mt-4 md:hidden">
@@ -79,10 +79,10 @@ export function Navbar() {
             ))}
             <li className="hidden md:flex items-center">
               <Link
-                href="/#contact-section"
-                className="bg-primary text-on-primary text-sm lg:text-md text-nowrap px-3 lg:px-6 py-1 lg:py-2.5 rounded-md lg:font-bold font-semibold hover:scale-110 transition-all active:scale-95 duration-300 ease-in-out"
+                href="/booking"
+                className="bg-primary text-on-primary text-sm lg:text-md text-nowrap px-3 lg:px-4 py-1 lg:py-2 ml:1 rounded-sm lg:font-bold font-semibold  hover:bg-on-secondary-container transition-all active:scale-95 duration-300 ease-in-out"
               >
-                Get Started
+                Book Consultation
               </Link>
             </li>
           </ul>

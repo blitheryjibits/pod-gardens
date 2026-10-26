@@ -6,21 +6,22 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 type CalendarUIProps = {
-  bookedDates: Date[];
-  bookedTimes: Record<string, string[]>; // { "2026-05-12": ["10:00", "11:00"] }
+  bookedDates: Record<string, string[]>;
   availableTimes: string[];
   onDateChange: (date: Date | undefined) => void;
   onTimeChange: (time: string) => void;
+  onMonthChange: (date: Date) => void;
   initialDate?: Date;
   initialTime?: string;
 };
 
 export function CalendarUI({
   bookedDates,
-  bookedTimes,
+
   availableTimes,
   onDateChange,
   onTimeChange,
+  onMonthChange,
   initialDate,
   initialTime,
 }: CalendarUIProps) {
@@ -31,23 +32,27 @@ export function CalendarUI({
     initialTime,
   );
 
-  // Convert bookedDates to a Set of YYYY-MM-DD strings for fast lookup
-  const bookedDateStrings = React.useMemo(
-    () => new Set(bookedDates.map((d) => d.toISOString().split("T")[0])),
-    [bookedDates],
-  );
-
   const selectedDateKey = selectedDate
     ? selectedDate.toISOString().split("T")[0]
     : null;
 
   const timesBookedForSelectedDate =
-    (selectedDateKey && bookedTimes[selectedDateKey]) || [];
+    (selectedDateKey && bookedDates[selectedDateKey]) || [];
+  console.log(
+    "selectedDateKey: " +
+      selectedDateKey +
+      "\n" +
+      "timesBookedForSelectedDate inside CalendarUI: " +
+      timesBookedForSelectedDate,
+  );
 
   const handleDateSelect = (date: Date | undefined) => {
     setSelectedDate(date);
     setSelectedTime(undefined);
     onDateChange(date);
+    if (date && date.getMonth() !== selectedDate?.getMonth()) {
+      onMonthChange(date);
+    }
   };
 
   const handleTimeSelect = (time: string) => {
@@ -64,16 +69,20 @@ export function CalendarUI({
           selected={selectedDate}
           onSelect={handleDateSelect}
           disabled={(date) => {
-            const key = date.toISOString().split("T")[0];
-            return bookedDateStrings.has(key);
+            const today: Date = new Date();
+            return date <= today;
           }}
           modifiers={{
-            booked: bookedDates,
+            past: (date, today = new Date()) => date < today,
           }}
           modifiersStyles={{
             booked: {
               textDecoration: "line-through",
-              opacity: 0.5,
+              opacity: 0.6,
+            },
+            past: {
+              opacity: 0.6,
+              textDecoration: "line-through",
             },
           }}
           className="mx-auto"

@@ -9,6 +9,7 @@ export default function Services() {
 
       <section className="max-w-8xl mx-auto px-8 mb-16">
         <div className="flex flex-wrap gap-4 items-center justify-center border-b border-outline-variant/20 pb-8">
+<<<<<<< HEAD
           <button
             type="button"
             className="px-5 py-2 bg-primary text-on-primary rounded-full font-body text-sm font-medium transition-all"
@@ -25,6 +26,15 @@ export default function Services() {
             type="button"
             className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all"
           >
+=======
+          <button className="px-5 py-2 bg-primary text-on-primary rounded-full font-body text-sm font-medium transition-all">
+            All Projects
+          </button>
+          <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
+            Residential
+          </button>
+          <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
+>>>>>>> c7cdfb00611e5ffe9dc9ad943ea2217b855f16b4
             Rural
           </button>
           <button className="px-5 py-2 bg-surface-container text-on-surface-variant hover:bg-surface-variant rounded-full font-body text-sm font-medium transition-all">
